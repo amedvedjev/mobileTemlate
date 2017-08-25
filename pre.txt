@@ -1,0 +1,49 @@
+
+Prepare your MAC:
+
+	General precondition:
+		- latest OS X is installed
+
+	Install Java JDK:
+		- use latest stable (current java 1.8.0_131-b11) http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+	Install Android Studio:
+		install latest android studio to manage Android SDK and Android tools install from https://developer.android.com/studio/index.html 
+
+	Install Brew:
+		to install brew execute in terminal:
+			ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+	Install nodejs:
+		download from https://nodejs.org/en/download/ and install
+
+	Install npm:
+		to install npm execute in terminal:
+			npm install -g npm
+
+	Install maven:
+		to install maven execute in terminal:
+			brew update
+			brew install maven
+
+	Update system preference:
+		open bash_profile in terminal with 'nano ~/.bash_profile'
+		paste following:
+			export ANDROID_HOME=/Users/jenkinss/Library/Android/sdk
+			export PATH=$ANDROID_HOME/platform-tools:$PATH
+			export PATH=$ANDROID_HOME/tools:$PATH
+			export JAVA_HOME=$(/usr/libexec/java_home)
+
+	Install Appium:
+		install latest appium version (latest) execute in terminal:
+			brew install node
+			npm install -g appium@beta
+			npm install wd
+
+Prepare your Phone:
+
+	Android:
+		1) enable debug mode https://www.kingoapp.com/root-tutorials/how-to-enable-usb-debugging-mode-on-android.htm
+		2) enable "USB debugging"
+		3) remove any LOCK pattern/PIN on phone
+		4) disable any "check app for hamfull behavior" in settings (sometimes it prevent app install via usb)

@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="BVT_Android">
+    <test name="BVT All" preserve-order="true">
+        <parameter name="devicePlatform" value="android"/>
+        <parameter name="deviceName" value="android"/>
+        <classes>
+            <class name="com.mobileTemplate.tests.android.test_1">
+                <methods>
+                    <include name="foundGraphics_Sweep"></include>
+                    <include name="foundViews_Sweep"></include>
+                    <include name="foundViews_WebView"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

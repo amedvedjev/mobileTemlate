@@ -1,0 +1,120 @@
+aleks:mobileTemplate Aleksei$ mvn clean test
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building mobileTemplate 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ mobileTemplate ---
+[INFO] Deleting /Users/Aleksei/Downloads/sources/mobileTemplate/target
+[INFO] Deleting /tmp/logs
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ mobileTemplate ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ mobileTemplate ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ mobileTemplate ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ mobileTemplate ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /Users/Aleksei/Downloads/sources/mobileTemplate/target/test-classes
+[INFO] /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/com/mobileTemplate/base/Page.java: /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/com/mobileTemplate/base/Page.java uses or overrides a deprecated API.
+[INFO] /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/com/mobileTemplate/base/Page.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/com/mobileTemplate/base/BaseTest.java: /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/com/mobileTemplate/base/BaseTest.java uses unchecked or unsafe operations.
+[INFO] /Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/com/mobileTemplate/base/BaseTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ mobileTemplate ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+BeforeSuite: 
+   executeShell(): [sh, -c, lsof -P | grep ':4723' | awk '{print $2}' | xargs kill -9]
+   start Appium server
+ start appium as: [appium, --log-level, error, --port, 4723, --bootstrap-port, 5723, --command-timeout, 90, --session-override, --log-timestamp]
+  appium server started
+BeforeMethod: 
+  open driver
+Capabilities [{app=/Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/resources/ApiDemos-debug.apk, noReset=true, clearSystemFiles=true, automationName=Appium, appWaitActivity=.ApiDemos, browserName=android, disableAndroidWatchers=true, platformName=Android, version=, deviceName=Android, fullReset=false, platform=ANDROID}]
+  isMainPageLoaded()
+  tapCellByTitle(): Graphics
+  getHeaderText()
+  tapCellByTitle(): Sweep
+  getHeaderText()
+AfterMethod: 
+  driver quit
+BeforeMethod: 
+  open driver
+Capabilities [{app=/Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/resources/ApiDemos-debug.apk, noReset=true, clearSystemFiles=true, automationName=Appium, appWaitActivity=.ApiDemos, browserName=android, disableAndroidWatchers=true, platformName=Android, version=, deviceName=Android, fullReset=false, platform=ANDROID}]
+  isMainPageLoaded()
+  tapCellByTitle(): Views
+  getHeaderText()
+  tapCellByTitle(): Sweep
+AfterMethod: 
+  driver quit
+BeforeMethod: 
+  open driver
+Capabilities [{app=/Users/Aleksei/Downloads/sources/mobileTemplate/src/test/java/resources/ApiDemos-debug.apk, noReset=true, clearSystemFiles=true, automationName=Appium, appWaitActivity=.ApiDemos, browserName=android, disableAndroidWatchers=true, platformName=Android, version=, deviceName=Android, fullReset=false, platform=ANDROID}]
+  isMainPageLoaded()
+  tapCellByTitle(): Views
+  getHeaderText()
+  tapCellByTitle(): WebView
+  getHeaderText()
+AfterMethod: 
+  driver quit
+AfterTest: 
+  ---------------------------
+  passed tests execution time:
+   com.mobileTemplate.tests.android.test_1 foundGraphics_Sweep [ ]                                  - 9 sec
+   com.mobileTemplate.tests.android.test_1 foundViews_WebView [ ]                                   - 11 sec
+
+
+  Total passed tests: 2
+  Average test execution time: 10 sec
+AfterSuite: 
+===============================================
+  passed tests:  2
+  skipped tests: 0
+  failed tests:  1
+===============================================
+
+closing Appium server 1
+closing Appium server 1 Forcibly
+SUITE completed!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 98.92 sec <<< FAILURE! - in TestSuite
+foundViews_Sweep(com.mobileTemplate.tests.android.test_1)  Time elapsed: 19.722 sec  <<< FAILURE!
+java.lang.AssertionError: 'Sweep' cell NOT found
+   at com.mobileTemplate.tests.android.test_1.foundViews_Sweep(test_1.java:33)
+
+
+Results :
+
+Failed tests: 
+  test_1.foundViews_Sweep:33 'Sweep' cell NOT found
+
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:41 min
+[INFO] Finished at: 2017-08-25T14:55:31+03:00
+[INFO] Final Memory: 22M/241M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project mobileTemplate: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/Aleksei/Downloads/sources/mobileTemplate/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+aleks:mobileTemplate Aleksei$ 
